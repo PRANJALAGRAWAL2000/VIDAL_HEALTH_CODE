@@ -1,0 +1,144 @@
+﻿.\maven_dist\apache-maven
+-3.9.6\bin\mvn.cmd : 
+WARNING: A restricted 
+method in 
+java.lang.System has 
+been called
+At line:1 char:1
++ .\maven_dist\apache-mav
+en-3.9.6\bin\mvn.cmd -s 
+local-settings.xml cle 
+...
++ ~~~~~~~~~~~~~~~~~~~~~~~
+~~~~~~~~~~~~~~~~~~~~~~~~~
+~~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo       
+       : NotSpecified:   
+  (WARNING: A rest...h   
+ as been called:Strin    
+g) [], RemoteExcepti    
+on
+    + FullyQualifiedErro 
+   rId : NativeCommandE  
+  rror
+ 
+WARNING: 
+java.lang.System::load 
+has been called by org.fu
+sesource.jansi.internal.J
+ansiLoader in an unnamed 
+module (file:/C:/Users/pr
+anj/Documents/BajajHealth
+Qualifier/maven_dist/apac
+he-maven-3.9.6/lib/jansi-
+2.4.0.jar)
+WARNING: Use --enable-nat
+ive-access=ALL-UNNAMED 
+to avoid a warning for 
+callers in this module
+WARNING: Restricted 
+methods will be blocked 
+in a future release 
+unless native access is 
+enabled
+
+WARNING: A terminally 
+deprecated method in 
+sun.misc.Unsafe has been 
+called
+WARNING: sun.misc.Unsafe:
+:objectFieldOffset has 
+been called by com.google
+.common.util.concurrent.A
+bstractFuture$UnsafeAtomi
+cHelper (file:/C:/Users/p
+ranj/Documents/BajajHealt
+hQualifier/maven_dist/apa
+che-maven-3.9.6/lib/guava
+-32.0.1-jre.jar)
+WARNING: Please consider 
+reporting this to the 
+maintainers of class com.
+google.common.util.concur
+rent.AbstractFuture$Unsaf
+eAtomicHelper
+WARNING: sun.misc.Unsafe:
+:objectFieldOffset will 
+be removed in a future 
+release
+[INFO] Scanning for projects...
+[INFO] 
+[INFO] ------------------------< com.bajaj:qualifier >-------------------------
+[INFO] Building qualifier 0.0.1-SNAPSHOT
+[INFO]   from pom.xml
+[INFO] --------------------------------[ jar ]---------------------------------
+[INFO] 
+[INFO] --- clean:3.3.2:clean (default-clean) @ qualifier ---
+[INFO] Deleting C:\Users\pranj\Documents\BajajHealthQualifier\target
+[INFO] 
+[INFO] >>> spring-boot:3.2.2:run (default-cli) > test-compile @ qualifier >>>
+[INFO] 
+[INFO] --- resources:3.3.1:resources (default-resources) @ qualifier ---
+[INFO] skip non existing resourceDirectory C:\Users\pranj\Documents\BajajHealthQualifier\src\main\resources
+[INFO] skip non existing resourceDirectory C:\Users\pranj\Documents\BajajHealthQualifier\src\main\resources
+[INFO] 
+[INFO] --- compiler:3.11.0:compile (default-compile) @ qualifier ---
+[INFO] Changes detected - recompiling the module! :source
+[INFO] Compiling 5 source files with javac [debug release 17] to target\classes
+[INFO] -------------------------------------------------------------
+[ERROR] COMPILATION ERROR : 
+[INFO] -------------------------------------------------------------
+[ERROR] /C:/Users/pranj/Documents/BajajHealthQualifier/src/main/java/com/bajaj/qualifier/service/ProcessService.java:[23,35] constructor InitRequest in class com.bajaj.qualifier.model.InitRequest cannot be applied to given types;
+  required: no arguments
+  found:    java.lang.String,java.lang.String,java.lang.String
+  reason: actual and formal argument lists differ in length
+[ERROR] /C:/Users/pranj/Documents/BajajHealthQualifier/src/main/java/com/bajaj/qualifier/service/ProcessService.java:[30,71] cannot find symbol
+  symbol:   method getWebhook()
+  location: variable initResponse of type com.bajaj.qualifier.model.InitResponse
+[ERROR] /C:/Users/pranj/Documents/BajajHealthQualifier/src/main/java/com/bajaj/qualifier/service/ProcessService.java:[31,77] cannot find symbol
+  symbol:   method getAccessToken()
+  location: variable initResponse of type com.bajaj.qualifier.model.InitResponse
+[ERROR] /C:/Users/pranj/Documents/BajajHealthQualifier/src/main/java/com/bajaj/qualifier/service/ProcessService.java:[39,44] cannot find symbol
+  symbol:   method getWebhook()
+  location: variable initResponse of type com.bajaj.qualifier.model.InitResponse
+[ERROR] /C:/Users/pranj/Documents/BajajHealthQualifier/src/main/java/com/bajaj/qualifier/service/ProcessService.java:[39,71] cannot find symbol
+  symbol:   method getAccessToken()
+  location: variable initResponse of type com.bajaj.qualifier.model.InitResponse
+[ERROR] /C:/Users/pranj/Documents/BajajHealthQualifier/src/main/java/com/bajaj/qualifier/service/ProcessService.java:[62,22] cannot find symbol
+  symbol:   method setQuery(java.lang.String)
+  location: variable submitRequest of type com.bajaj.qualifier.model.SubmitRequest
+[INFO] 6 errors 
+[INFO] -------------------------------------------------------------
+[INFO] ------------------------------------------------------------------------
+[INFO] BUILD FAILURE
+[INFO] ------------------------------------------------------------------------
+[INFO] Total time:  2.890 s
+[INFO] Finished at: 2026-02-06T12:42:20+05:30
+[INFO] ------------------------------------------------------------------------
+[ERROR] Failed to execute goal org.apache.maven.plugins:maven-compiler-plugin:3.11.0:compile (default-compile) on project qualifier: Compilation failure: Compilation failure: 
+[ERROR] /C:/Users/pranj/Documents/BajajHealthQualifier/src/main/java/com/bajaj/qualifier/service/ProcessService.java:[23,35] constructor InitRequest in class com.bajaj.qualifier.model.InitRequest cannot be applied to given types;
+[ERROR]   required: no arguments
+[ERROR]   found:    java.lang.String,java.lang.String,java.lang.String
+[ERROR]   reason: actual and formal argument lists differ in length
+[ERROR] /C:/Users/pranj/Documents/BajajHealthQualifier/src/main/java/com/bajaj/qualifier/service/ProcessService.java:[30,71] cannot find symbol
+[ERROR]   symbol:   method getWebhook()
+[ERROR]   location: variable initResponse of type com.bajaj.qualifier.model.InitResponse
+[ERROR] /C:/Users/pranj/Documents/BajajHealthQualifier/src/main/java/com/bajaj/qualifier/service/ProcessService.java:[31,77] cannot find symbol
+[ERROR]   symbol:   method getAccessToken()
+[ERROR]   location: variable initResponse of type com.bajaj.qualifier.model.InitResponse
+[ERROR] /C:/Users/pranj/Documents/BajajHealthQualifier/src/main/java/com/bajaj/qualifier/service/ProcessService.java:[39,44] cannot find symbol
+[ERROR]   symbol:   method getWebhook()
+[ERROR]   location: variable initResponse of type com.bajaj.qualifier.model.InitResponse
+[ERROR] /C:/Users/pranj/Documents/BajajHealthQualifier/src/main/java/com/bajaj/qualifier/service/ProcessService.java:[39,71] cannot find symbol
+[ERROR]   symbol:   method getAccessToken()
+[ERROR]   location: variable initResponse of type com.bajaj.qualifier.model.InitResponse
+[ERROR] /C:/Users/pranj/Documents/BajajHealthQualifier/src/main/java/com/bajaj/qualifier/service/ProcessService.java:[62,22] cannot find symbol
+[ERROR]   symbol:   method setQuery(java.lang.String)
+[ERROR]   location: variable submitRequest of type com.bajaj.qualifier.model.SubmitRequest
+[ERROR] -> [Help 1]
+[ERROR] 
+[ERROR] To see the full stack trace of the errors, re-run Maven with the -e switch.
+[ERROR] Re-run Maven using the -X switch to enable full debug logging.
+[ERROR] 
+[ERROR] For more information about the errors and possible solutions, please read the following articles:
+[ERROR] [Help 1] http://cwiki.apache.org/confluence/display/MAVEN/MojoFailureException

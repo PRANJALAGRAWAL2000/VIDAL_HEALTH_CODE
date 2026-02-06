@@ -1,0 +1,5 @@
+com\bajaj\qualifier\BajajQualifierApplication.class
+com\bajaj\qualifier\model\InitRequest.class
+com\bajaj\qualifier\service\ProcessService.class
+com\bajaj\qualifier\model\InitResponse.class
+com\bajaj\qualifier\model\SubmitRequest.class

@@ -1,0 +1,130 @@
+﻿.\maven_dist\apache-maven
+-3.9.6\bin\mvn.cmd : 
+WARNING: A restricted 
+method in 
+java.lang.System has 
+been called
+At line:1 char:1
++ .\maven_dist\apache-mav
+en-3.9.6\bin\mvn.cmd -s 
+local-settings.xml cle 
+...
++ ~~~~~~~~~~~~~~~~~~~~~~~
+~~~~~~~~~~~~~~~~~~~~~~~~~
+~~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo       
+       : NotSpecified:   
+  (WARNING: A rest...h   
+ as been called:Strin    
+g) [], RemoteExcepti    
+on
+    + FullyQualifiedErro 
+   rId : NativeCommandE  
+  rror
+ 
+WARNING: 
+java.lang.System::load 
+has been called by org.fu
+sesource.jansi.internal.J
+ansiLoader in an unnamed 
+module (file:/C:/Users/pr
+anj/Documents/BajajHealth
+Qualifier/maven_dist/apac
+he-maven-3.9.6/lib/jansi-
+2.4.0.jar)
+WARNING: Use --enable-nat
+ive-access=ALL-UNNAMED 
+to avoid a warning for 
+callers in this module
+WARNING: Restricted 
+methods will be blocked 
+in a future release 
+unless native access is 
+enabled
+
+WARNING: A terminally 
+deprecated method in 
+sun.misc.Unsafe has been 
+called
+WARNING: sun.misc.Unsafe:
+:objectFieldOffset has 
+been called by com.google
+.common.util.concurrent.A
+bstractFuture$UnsafeAtomi
+cHelper (file:/C:/Users/p
+ranj/Documents/BajajHealt
+hQualifier/maven_dist/apa
+che-maven-3.9.6/lib/guava
+-32.0.1-jre.jar)
+WARNING: Please consider 
+reporting this to the 
+maintainers of class com.
+google.common.util.concur
+rent.AbstractFuture$Unsaf
+eAtomicHelper
+WARNING: sun.misc.Unsafe:
+:objectFieldOffset will 
+be removed in a future 
+release
+[INFO] Scanning for projects...
+[INFO] 
+[INFO] ------------------------< com.bajaj:qualifier >-------------------------
+[INFO] Building qualifier 0.0.1-SNAPSHOT
+[INFO]   from pom.xml
+[INFO] --------------------------------[ jar ]---------------------------------
+[INFO] 
+[INFO] --- clean:3.3.2:clean (default-clean) @ qualifier ---
+[INFO] Deleting C:\Users\pranj\Documents\BajajHealthQualifier\target
+[INFO] 
+[INFO] >>> spring-boot:3.2.2:run (default-cli) > test-compile @ qualifier >>>
+[INFO] 
+[INFO] --- resources:3.3.1:resources (default-resources) @ qualifier ---
+[INFO] skip non existing resourceDirectory C:\Users\pranj\Documents\BajajHealthQualifier\src\main\resources
+[INFO] skip non existing resourceDirectory C:\Users\pranj\Documents\BajajHealthQualifier\src\main\resources
+[INFO] 
+[INFO] --- compiler:3.11.0:compile (default-compile) @ qualifier ---
+[INFO] Changes detected - recompiling the module! :source
+[INFO] Compiling 5 source files with javac [debug release 17] to target\classes
+[INFO] 
+[INFO] --- resources:3.3.1:testResources (default-testResources) @ qualifier ---
+[INFO] skip non existing resourceDirectory C:\Users\pranj\Documents\BajajHealthQualifier\src\test\resources
+[INFO] 
+[INFO] --- compiler:3.11.0:testCompile (default-testCompile) @ qualifier ---
+[INFO] No sources to compile
+[INFO] 
+[INFO] <<< spring-boot:3.2.2:run (default-cli) < test-compile @ qualifier <<<
+[INFO] 
+[INFO] 
+[INFO] --- spring-boot:3.2.2:run (default-cli) @ qualifier ---
+[INFO] Attaching agents: []
+
+  .   ____          _            __ _ _
+ /\\ / ___'_ __ _ _(_)_ __  __ _ \ \ \ \
+( ( )\___ | '_ | '_| | '_ \/ _` | \ \ \ \
+ \\/  ___)| |_)| | | | | || (_| |  ) ) ) )
+  '  |____| .__|_| |_|_| |_\__, | / / / /
+ =========|_|==============|___/=/_/_/_/
+ :: Spring Boot ::                (v3.2.2)
+
+2026-02-06T12:50:03.496+05:30  INFO 22520 --- [           main] c.b.qualifier.BajajQualifierApplication  : Starting BajajQualifierApplication using Java 25.0.1 with PID 22520 (C:\Users\pranj\Documents\BajajHealthQualifier\target\classes started by pranj in C:\Users\pranj\Documents\BajajHealthQualifier)
+2026-02-06T12:50:03.499+05:30  INFO 22520 --- [           main] c.b.qualifier.BajajQualifierApplication  : No active profile set, falling back to 1 default profile: "default"
+WARNING: A restricted method in java.lang.System has been called
+WARNING: java.lang.System::load has been called by org.apache.tomcat.jni.Library in an unnamed module (file:/C:/Users/pranj/Documents/BajajHealthQualifier/local-repo/org/apache/tomcat/embed/tomcat-embed-core/10.1.18/tomcat-embed-core-10.1.18.jar)
+WARNING: Use --enable-native-access=ALL-UNNAMED to avoid a warning for callers in this module
+WARNING: Restricted methods will be blocked in a future release unless native access is enabled
+
+2026-02-06T12:50:04.363+05:30  INFO 22520 --- [           main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8080 (http)
+2026-02-06T12:50:04.378+05:30  INFO 22520 --- [           main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2026-02-06T12:50:04.378+05:30  INFO 22520 --- [           main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.18]
+2026-02-06T12:50:04.447+05:30  INFO 22520 --- [           main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2026-02-06T12:50:04.447+05:30  INFO 22520 --- [           main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 894 ms
+2026-02-06T12:50:04.767+05:30  INFO 22520 --- [           main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8080 (http) with context path ''
+2026-02-06T12:50:04.775+05:30  INFO 22520 --- [           main] c.b.qualifier.BajajQualifierApplication  : Started BajajQualifierApplication in 1.743 seconds (process running for 2.087)
+Starting process...
+Sending request to: https://bfhldevapigw.healthrx.co.in/hiring/generateWebhook/JAVA
+Received Webhook: https://bfhldevapigw.healthrx.co.in/hiring/testWebhook/JAVA
+Received Access Token: Yes
+SQL Solution prepared: SELECT d.NAME AS DEPARTMENT_NAME, AVG(e.AGE) AS AVERAGE_AGE, SUBSTRING_INDEX(GROUP_CONCAT(CONCAT(e.FIRST_NAME, ' ', e.LAST_NAME) SEPARATOR ', '), ', ', 10) AS EMPLOYEE_LIST FROM EMPLOYEE e JOIN DEPARTMENT d ON e.DEPARTMENT_ID = d.ID WHERE e.SALARY > 70000 GROUP BY d.ID, d.NAME ORDER BY d.ID DESC
+Submitting solution to: https://bfhldevapigw.healthrx.co.in/hiring/testWebhook/JAVA
+Submission Response Code: 200 OK
+Submission Response Body: {"success":true,"message":"Webhook processed successfully"}
