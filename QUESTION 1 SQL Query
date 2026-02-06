@@ -1,0 +1,40 @@
+Problem Statement:
+Find the highest salaried employee, per department, but do not include payments that were
+made on the 1st day of the month.
+Output Format:
+• The output should contain the following columns:
+1. DEPARTMENT_NAME: The name of the department
+2. SALARY: The total highest salary of an employee not including the payment
+received on the 1st day of the month.
+3. EMPLOYEE_NAME: Combine the columns FIRST_NAME and LAST_NAME
+into one single column as EMPLOYEE_NAME with format <first
+name><space><last name>. Ex. FIRST_NAME: John, LAST_NAME: Doe then,
+NAME should be combined as “John Doe”
+4. AGE: The age of the employee who received that salary.
+========================================================================================================
+SQL QUERY
+
+WITH salary_rank AS (
+    SELECT
+        d.department_name,
+        p.amount AS salary,
+        CONCAT(e.first_name, ' ', e.last_name) AS employee_name,
+        EXTRACT(YEAR FROM AGE(CURRENT_DATE, e.dob)) AS age,
+        ROW_NUMBER() OVER (
+            PARTITION BY d.department_id
+            ORDER BY p.amount DESC
+        ) AS rn
+    FROM department d
+    JOIN employee e
+        ON e.department = d.department_id
+    JOIN payments p
+        ON p.emp_id = e.emp_id
+    WHERE EXTRACT(DAY FROM p.payment_time) <> 1
+)
+SELECT
+    department_name,
+    salary,
+    employee_name,
+    age
+FROM salary_rank
+WHERE rn = 1;
