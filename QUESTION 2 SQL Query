@@ -1,0 +1,56 @@
+Problem Statement:
+For every department, calculate the average age of individuals with salaries
+exceeding ₹70,000, and produce a concatenated string containing at most 10 of
+their names.
+Output Format:
+• The output should contain the following columns:
+1. DEPARTMENT_NAME: The name of the department the
+employee belongs to.
+2. AVERAGE_AGE: The average age of the employees earning more
+than ₹70,000.
+3. EMPLOYEE_LIST: For each department, calculate the average age
+of employees who earn more than ₹70,000, and return a
+comma-separated list of up to 10 employee names from that group.
+Example: For employee list :
+FIRST_NAME LAST_NAME
+Asha Rathore
+Rohit Lohia
+Meera Jain
+Vikram Singh
+Sonal Rai
+Result: Asha Rathore, Rohit Lohia, Meera Jain, Vikram Singh,
+Sonal Rai.
+Format: <FIRST_NAME><SPACE><LAST_NAME>
+The output should be ordered by department ID in descending order.
+
+================================================================================================================
+QUESTION 2 SQL QUERY 
+
+
+WITH ranked_employees AS (
+    SELECT
+        d.department_id,
+        d.department_name,
+        CONCAT(e.first_name, ' ', e.last_name) AS employee_name,
+        EXTRACT(YEAR FROM AGE(CURRENT_DATE, e.dob)) AS age,
+        p.amount,
+        ROW_NUMBER() OVER (
+            PARTITION BY d.department_id
+            ORDER BY e.emp_id
+        ) AS rn
+    FROM department d
+    JOIN employee e
+        ON e.department = d.department_id
+    JOIN payments p
+        ON p.emp_id = e.emp_id
+    WHERE p.amount > 70000
+)
+SELECT
+    department_name,
+    ROUND(AVG(age), 2) AS average_age,
+    STRING_AGG(employee_name, ', ' ORDER BY employee_name) AS employee_list
+FROM ranked_employees
+WHERE rn <= 10
+GROUP BY department_id, department_name
+ORDER BY department_id DESC;
+
